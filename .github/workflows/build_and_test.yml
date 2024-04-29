@@ -194,7 +194,7 @@ jobs:
           gsed -i~ "3i\    <title>${{ env.ARTIFACT_NAME }}</title>" distribution.xml
 
           # use productbuild to combine everything into a single installer and sign with Apple Developer ID Installer certificate
-          productbuild --distribution distribution.xml --resources resources/ ${{ env.ARTIFACT_NAME }}.pkg
+          productbuild --distribution distribution.xml ${{ env.ARTIFACT_NAME }}.pkg
           productsign --sign "${{ secrets.DEVELOPER_ID_INSTALLER }}" ${{ env.ARTIFACT_NAME }}.pkg "${{ env.ARTIFACT_NAME }}_v${{ env.VERSION }}_MacOS.pkg"
 
           # Notarize the installer
