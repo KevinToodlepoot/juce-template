@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug with AudioPluginHost",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/JUCE/cmake-build/extras/AudioPluginHost/AudioPluginHost_artefacts/AudioPluginHost.app/Contents/MacOS/AudioPluginHost",
+            // TODO: Add windows and linux paths
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build Project",
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "type format add -f hex int",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
