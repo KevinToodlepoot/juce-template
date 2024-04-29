@@ -1,3 +1,12 @@
+# Setting up debugging in VSCode
+
+* Upon cloning the repository, run the script `./configure.sh`. This will update the submodules as well as build AudioPluginHost
+* Navigate to the CMakeTools extension and select your kit (Clang for MacOS, MSVC for Windows)
+* Under the `Configure` option in CMakeTools, set the build type to whatever you want (Debug, Release, RelWithDebugInfo, etc.)
+* Now you should be able Debug just fine! Either navigate to the `Run and Debug` option of activity bar and select `Debug with AudioPluginHost`, or simply press `F5`.
+
+---
+
 ![PAMPLEJUCE](assets/images/pamplejuce.png)
 [![](https://github.com/sudara/pamplejuce/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/sudara/pamplejuce/actions)
 
